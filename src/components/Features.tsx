@@ -26,17 +26,17 @@ const FeatureCard: React.FC<FeatureProps> = ({ title, description, icon, glowCla
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -8, scale: 1.01 }}
-      className="bg-glass rounded-2xl p-6 border border-black/10 dark:border-white/10 hover:border-gold-500/20 transition-all duration-300 relative group overflow-hidden"
+      className="bg-glass rounded-2xl p-5 sm:p-6 border border-black/10 dark:border-white/10 hover:border-gold-500/20 transition-all duration-300 relative group overflow-hidden"
     >
       {/* Decorative radial glows on hover */}
       <div className={`absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${glowClass}`} />
 
       <div className="relative z-10">
-        <div className="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-gold-600 dark:text-gold-400 group-hover:bg-gradient-gold group-hover:text-luxury-dark transition-all duration-300 mb-6 shadow-inner">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-gold-600 dark:text-gold-400 group-hover:bg-gradient-gold group-hover:text-luxury-dark transition-all duration-300 mb-4 sm:mb-6 shadow-inner">
           {icon}
         </div>
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2.5 group-hover:text-gold-700 dark:group-hover:text-gold-100 transition-colors duration-300">{title}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors duration-300">{description}</p>
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2.5 group-hover:text-gold-700 dark:group-hover:text-gold-100 transition-colors duration-300">{title}</h3>
+        <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors duration-300">{description}</p>
       </div>
     </motion.div>
   );

@@ -73,25 +73,25 @@ export const InvestmentPlanner: React.FC = () => {
         </div>
 
         {/* Calculator Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch">
           
           {/* Left Column: Interactive Calculator Sliders */}
-          <div className="lg:col-span-7 bg-glass rounded-2xl p-6 sm:p-8 border border-black/10 dark:border-white/10 flex flex-col justify-between">
-            <div className="space-y-8">
+          <div className="lg:col-span-7 bg-glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-black/10 dark:border-white/10 flex flex-col justify-between">
+            <div className="space-y-5 sm:space-y-6">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-bold text-gray-800 dark:text-white uppercase tracking-wider flex items-center">
-                  <Sparkles className="w-4 h-4 text-gold-500 mr-2" /> Live Yield Estimator
+                <span className="text-xs sm:text-sm font-bold text-gray-800 dark:text-white uppercase tracking-wider flex items-center">
+                  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-500 mr-1.5 sm:mr-2" /> Live Yield Estimator
                 </span>
-                <span className="text-xs text-luxury-emerald bg-luxury-emerald/10 border border-luxury-emerald/20 px-3 py-1 rounded-full font-semibold">
+                <span className="text-[10px] sm:text-xs text-luxury-emerald bg-luxury-emerald/10 border border-luxury-emerald/20 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-semibold">
                   Avg. Yield: 9.8% p.a.
                 </span>
               </div>
 
               {/* Slider 1: Monthly Contribution */}
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <div className="flex justify-between items-baseline">
-                  <label className="text-sm text-gray-700 dark:text-gray-300 font-semibold">Monthly Savings Target</label>
-                  <span className="text-xl font-extrabold text-gradient-gold">{formatCurrency(monthlyContribution)}</span>
+                  <label className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-semibold">Monthly Savings Target</label>
+                  <span className="text-lg sm:text-xl font-extrabold text-gradient-gold">{formatCurrency(monthlyContribution)}</span>
                 </div>
                 <input
                   type="range"
@@ -102,17 +102,17 @@ export const InvestmentPlanner: React.FC = () => {
                   onChange={(e) => setMonthlyContribution(Number(e.target.value))}
                   className="w-full h-2 bg-black/10 dark:bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-500">
+                <div className="flex justify-between text-[9px] sm:text-[10px] text-gray-500">
                   <span>Min: ₹5,000</span>
                   <span>Max: ₹1,50,000</span>
                 </div>
               </div>
 
               {/* Slider 2: Duration */}
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <div className="flex justify-between items-baseline">
-                  <label className="text-sm text-gray-700 dark:text-gray-300 font-semibold">Plan Duration</label>
-                  <span className="text-xl font-extrabold text-gray-900 dark:text-white">{duration} Months</span>
+                  <label className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-semibold">Plan Duration</label>
+                  <span className="text-lg sm:text-xl font-extrabold text-gray-900 dark:text-white">{duration} Months</span>
                 </div>
                 <input
                   type="range"
@@ -123,7 +123,7 @@ export const InvestmentPlanner: React.FC = () => {
                   onChange={(e) => setDuration(Number(e.target.value))}
                   className="w-full h-2 bg-black/10 dark:bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-500">
+                <div className="flex justify-between text-[9px] sm:text-[10px] text-gray-500">
                   <span>Min: 20 Months</span>
                   <span>Max: 50 Months</span>
                 </div>
@@ -131,22 +131,22 @@ export const InvestmentPlanner: React.FC = () => {
             </div>
 
             {/* Live Yield Calculated Dashboard details */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 mt-8 border-t border-black/10 dark:border-white/5">
-              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-3 border border-black/5 dark:border-white/5">
-                <span className="text-[10px] text-gray-500 block uppercase font-medium">Principal Invested</span>
-                <span className="text-md font-bold text-gray-900 dark:text-white mt-1 block">{formatCurrency(totalPrincipal)}</span>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-5 sm:pt-6 mt-5 sm:mt-6 border-t border-black/10 dark:border-white/5">
+              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-2 sm:p-3 border border-black/5 dark:border-white/5">
+                <span className="text-[9px] sm:text-[10px] text-gray-500 block uppercase font-medium">Principal Invested</span>
+                <span className="text-sm sm:text-md font-bold text-gray-900 dark:text-white mt-0.5 block">{formatCurrency(totalPrincipal)}</span>
               </div>
-              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-3 border border-black/5 dark:border-white/5">
-                <span className="text-[10px] text-gray-500 block uppercase font-medium">Est. Dividends</span>
-                <span className="text-md font-bold text-luxury-emerald mt-1 block">+{formatCurrency(estimatedDividends)}</span>
+              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-2 sm:p-3 border border-black/5 dark:border-white/5">
+                <span className="text-[9px] sm:text-[10px] text-gray-500 block uppercase font-medium">Est. Dividends</span>
+                <span className="text-sm sm:text-md font-bold text-luxury-emerald mt-0.5 block">+{formatCurrency(estimatedDividends)}</span>
               </div>
-              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-3 border border-black/5 dark:border-white/5">
-                <span className="text-[10px] text-gray-500 block uppercase font-medium">Total Maturity</span>
-                <span className="text-md font-bold text-gradient-gold mt-1 block">{formatCurrency(maturityValue)}</span>
+              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-2 sm:p-3 border border-black/5 dark:border-white/5">
+                <span className="text-[9px] sm:text-[10px] text-gray-500 block uppercase font-medium">Total Maturity</span>
+                <span className="text-sm sm:text-md font-bold text-gradient-gold mt-0.5 block">{formatCurrency(maturityValue)}</span>
               </div>
-              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-3 border border-black/5 dark:border-white/5">
-                <span className="text-[10px] text-gray-500 block uppercase font-medium">Net Monthly Cost</span>
-                <span className="text-md font-bold text-gray-900 dark:text-white mt-1 block">{formatCurrency(effectiveCost)}</span>
+              <div className="bg-black/5 dark:bg-white/5 rounded-xl p-2 sm:p-3 border border-black/5 dark:border-white/5">
+                <span className="text-[9px] sm:text-[10px] text-gray-500 block uppercase font-medium">Net Monthly Cost</span>
+                <span className="text-sm sm:text-md font-bold text-gray-900 dark:text-white mt-0.5 block">{formatCurrency(effectiveCost)}</span>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ export const InvestmentPlanner: React.FC = () => {
           <div className="lg:col-span-5">
             <motion.div
               layout
-              className="bg-glass rounded-2xl p-6 sm:p-8 border border-black/10 dark:border-white/10 shadow-2xl h-full flex flex-col justify-between relative overflow-hidden"
+              className="bg-glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-black/10 dark:border-white/10 shadow-2xl h-full flex flex-col justify-between relative overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
@@ -164,18 +164,18 @@ export const InvestmentPlanner: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    className="flex flex-col items-center justify-center h-full text-center py-8"
+                    className="flex flex-col items-center justify-center h-full text-center py-6 sm:py-8"
                   >
-                    <div className="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 dark:text-gold-400 mb-6 glow-gold">
-                      <CheckCircle2 className="w-7 h-7" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 dark:text-gold-400 mb-4 sm:mb-6 glow-gold">
+                      <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7" />
                     </div>
-                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Savings Blueprint Locked</h4>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 max-w-[280px] leading-relaxed mb-6">
+                    <h4 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2">Savings Blueprint Locked</h4>
+                    <p className="text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 max-w-[260px] sm:max-w-[280px] leading-relaxed mb-4 sm:mb-6">
                       Your calculations for a {duration}-month scheme at {formatCurrency(monthlyContribution)}/mo have been saved. An advisor will message you to proceed.
                     </p>
                     <button
                       onClick={() => setIsSubmitted(false)}
-                      className="text-xs text-gold-600 dark:text-gold-400 font-bold hover:underline"
+                      className="text-[11px] sm:text-xs text-gold-600 dark:text-gold-400 font-bold hover:underline"
                     >
                       Reset planner configurations
                     </button>
@@ -187,11 +187,11 @@ export const InvestmentPlanner: React.FC = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="space-y-4"
+                    className="space-y-3 sm:space-y-4"
                   >
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">Subscribe & Lock Rates</h3>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Submit this plan details to hold slots in the next upcoming group.</p>
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">Subscribe & Lock Rates</h3>
+                      <p className="text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 mt-0.5 sm:mt-1">Submit this plan details to hold slots in the next upcoming group.</p>
                     </div>
 
                     <div className="space-y-1">

@@ -147,8 +147,8 @@ export const HowItWorks: React.FC = () => {
         </div>
 
         {/* Timeline Mobile Structure */}
-        <div className="md:hidden space-y-8 relative">
-          <div className="absolute left-6 top-4 bottom-4 w-[2px] bg-gradient-to-b from-gold-500 to-blue-500 opacity-20" />
+        <div className="md:hidden space-y-5 relative">
+          <div className="absolute left-6 top-3 bottom-3 w-[2px] bg-gradient-to-b from-gold-500 to-blue-500 opacity-20" />
 
           {steps.map((step, idx) => (
             <motion.div
@@ -157,14 +157,14 @@ export const HowItWorks: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="flex space-x-4 pl-2"
+              className="flex space-x-3 pl-1"
             >
-              <div className="w-10 h-10 rounded-full bg-luxury-dark border-2 border-gold-600 flex items-center justify-center text-gold-600 dark:text-gold-400 shrink-0 z-10 shadow-lg shadow-gold-500/10">
+              <div className="w-9 h-9 rounded-full bg-luxury-dark border-2 border-gold-600 flex items-center justify-center text-gold-600 dark:text-gold-400 shrink-0 z-10 shadow-lg shadow-gold-500/10">
                 {step.icon}
               </div>
-              <div className="bg-glass rounded-2xl p-5 border border-black/10 dark:border-white/10 hover:border-gold-500/10 w-full">
-                <span className="text-xs font-bold text-gold-600 dark:text-gold-400">Step 0{step.number}</span>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mt-0.5 mb-1.5">{step.title}</h3>
+              <div className="bg-glass rounded-2xl p-4 border border-black/10 dark:border-white/10 hover:border-gold-500/10 w-full">
+                <span className="text-[11px] font-bold text-gold-600 dark:text-gold-400">Step 0{step.number}</span>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white mt-0.5 mb-1">{step.title}</h3>
                 <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{step.description}</p>
               </div>
             </motion.div>

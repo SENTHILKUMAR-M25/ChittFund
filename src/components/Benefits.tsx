@@ -17,21 +17,21 @@ interface BenefitProps {
   icon: React.ReactNode;
 }
 
-const BenefitItem: React.FC<BenefitProps> = ({ title, description, icon }) => {
+  const BenefitItem: React.FC<BenefitProps> = ({ title, description, icon }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="flex items-start space-x-4 p-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 border border-transparent hover:border-black/5 dark:hover:border-white/5 transition-all duration-350"
+      className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 border border-transparent hover:border-black/5 dark:hover:border-white/5 transition-all duration-350"
     >
-      <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-600 dark:text-gold-400 shrink-0">
+      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-600 dark:text-gold-400 shrink-0">
         {icon}
       </div>
       <div>
-        <h3 className="text-md font-bold text-gray-900 dark:text-white mb-1">{title}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
+        <h3 className="text-sm sm:text-md font-bold text-gray-900 dark:text-white mb-0.5 sm:mb-1">{title}</h3>
+        <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -76,7 +76,7 @@ export const Benefits: React.FC = () => {
       {/* Radial Background Light */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] glow-radial-emerald opacity-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
         {/* Left Side: Text and Benefits List */}
         <div className="lg:col-span-6 flex flex-col justify-center text-left">

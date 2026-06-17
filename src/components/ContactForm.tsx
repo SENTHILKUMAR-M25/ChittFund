@@ -49,16 +49,16 @@ export const ContactForm: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
           
           {/* Left Column: Info Card */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-4 sm:space-y-6">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-glass rounded-2xl p-8 border border-black/10 dark:border-white/10 flex-grow flex flex-col justify-between"
+              className="bg-glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-black/10 dark:border-white/10 flex-grow flex flex-col justify-between"
             >
               <div className="space-y-6">
                 <div>
@@ -121,7 +121,7 @@ export const ContactForm: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-glass rounded-2xl p-8 border border-black/10 dark:border-white/10 shadow-2xl h-full relative overflow-hidden"
+              className="bg-glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-black/10 dark:border-white/10 shadow-2xl h-full relative overflow-hidden"
             >
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center h-full text-center py-12">
@@ -140,7 +140,7 @@ export const ContactForm: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="space-y-1.5">
                       <label htmlFor="name" className="text-[11px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Full Name</label>

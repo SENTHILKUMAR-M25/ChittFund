@@ -53,13 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8"
           >
-            <button
-              onClick={() => onNavigate('contact')}
-              className="flex items-center justify-center space-x-2 text-base font-bold text-luxury-dark bg-gradient-gold px-8 py-4 rounded-xl shadow-lg hover:shadow-gold-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
+           
             <button
               onClick={() => onNavigate('plans')}
               className="flex items-center justify-center space-x-2 text-base font-semibold text-gray-900 dark:text-white bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 hover:bg-black/10 dark:hover:bg-white/10 px-8 py-4 rounded-xl backdrop-blur-md hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
@@ -153,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="absolute -top-4 -right-2 sm:-right-4 bg-glass shadow-xl flex items-center space-x-2.5 max-w-[165px] hover:scale-105 transition-transform animate-float"
+            className="hidden md:flex absolute -top-4 -right-2 p-2 sm:-right-4 bg-glass shadow-xl items-center space-x-2.5 max-w-[195px] hover:scale-105 transition-transform animate-float"
           >
             <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
               <Users className="w-4 h-4 text-blue-500 dark:text-blue-400" />
@@ -170,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute bottom-8 -left-3 sm:-left-8 bg-glass shadow-xl flex items-center space-x-2.5 max-w-[175px] hover:scale-105 transition-transform animate-float-delayed"
+            className="absolute bottom-40 -left-3 sm:-left-8 bg-glass shadow-xl flex items-center space-x-2.5 max-w-[175px] p-2 hover:scale-105 transition-transform animate-float-delayed"
           >
             <div className="w-8 h-8 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
               <Wallet className="w-4 h-4 text-gold-600 dark:text-gold-400" />
@@ -187,7 +181,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="absolute -bottom-5 right-0 sm:right-3 bg-glass shadow-xl flex items-center space-x-2.5 max-w-[170px] hover:scale-105 transition-transform"
+            className="hidden md:flex absolute -bottom-5 p-2 right-0 sm:right-3 bg-glass shadow-xl items-center space-x-2.5 max-w-[170px] hover:scale-105 transition-transform"
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
               <DollarSign className="w-4 h-4 text-luxury-emerald" />

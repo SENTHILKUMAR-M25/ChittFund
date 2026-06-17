@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="min-h-screen bg-luxury-dark text-luxury-text flex flex-col selection:bg-gold-500/30 selection:text-white transition-colors duration-350">
       {/* Dynamic top-level glowing lights */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[500px] bg-gradient-to-b from-gold-500/5 via-transparent to-transparent pointer-events-none blur-[120px]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-sccreen h-[500px] bg-gradient-to-b from-gold-500/5 via-transparent to-transparent pointer-events-none blur-[120px]" />
 
       <Navbar onNavigate={handleNavigate} theme={theme} toggleTheme={toggleTheme} />
       

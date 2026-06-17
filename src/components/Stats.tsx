@@ -48,7 +48,7 @@ const StatCounter: React.FC<StatItemProps> = ({ icon, value, suffix, label, desc
       whileHover={{ y: -8, transition: { duration: 0.2 } }}
       className="rounded-2xl p-6 border border-black/10 dark:border-white/10 hover:border-gold-500/40 transition-all duration-300 relative group overflow-hidden bg-glass"
     >
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gold-500 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+      <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-gold-500 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
       <div className="absolute -right-10 -bottom-10 w-24 h-24 rounded-full bg-black/5 dark:bg-white/10 opacity-[0.03] dark:opacity-[0.03] group-hover:scale-150 transition-transform duration-500" />
 
       <div className="flex items-center justify-between mb-6">

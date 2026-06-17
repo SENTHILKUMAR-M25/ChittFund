@@ -6,7 +6,7 @@ import {
   ShieldCheck,
   ChevronRight,
 } from 'lucide-react';
-
+import logo from '../assets/jod.png';
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
 }
@@ -29,10 +29,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="lg:col-span-4 space-y-5">
           <div className="flex items-center space-x-2 cursor-pointer" onClick={() => handleLinkClick('home')}>
             <div className="relative flex items-center justify-center w-8 h-8 rounded bg-gradient-to-tr from-gold-600 to-gold-400">
-              <ShieldCheck className="w-4.5 h-4.5 text-luxury-dark" />
+              <img src={logo} alt="Logo" className="" />
             </div>
             <span className="text-lg font-bold tracking-wider text-gradient-gold">
-              AUREUM<span className="text-white text-[10px] block font-light tracking-[0.25em] -mt-1">CHITS</span>
+              JOD<span className="text-white text-[10px] block font-light tracking-[0.25em] -mt-1">CHITS</span>
             </span>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
