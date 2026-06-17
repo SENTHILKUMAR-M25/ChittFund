@@ -46,10 +46,10 @@ export const HowItWorks: React.FC = () => {
   return (
     <section id="about" className="py-24 relative bg-luxury-dark overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-10 left-10 w-[300px] h-[300px] glow-radial-emerald opacity-20 pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] glow-radial-gold opacity-20 pointer-events-none" />
+      <div className="absolute top-10 left-10 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] glow-radial-emerald opacity-20 pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] glow-radial-gold opacity-20 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">

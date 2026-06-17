@@ -74,9 +74,9 @@ export const Benefits: React.FC = () => {
   return (
     <section className="py-24 relative bg-luxury-dark">
       {/* Radial Background Light */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] glow-radial-emerald opacity-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[200px] h-[200px] sm:w-[600px] sm:h-[600px] glow-radial-emerald opacity-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
         {/* Left Side: Text and Benefits List */}
         <div className="lg:col-span-6 flex flex-col justify-center text-left">

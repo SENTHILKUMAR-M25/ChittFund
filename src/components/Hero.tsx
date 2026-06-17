@@ -10,9 +10,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center overflow-hidden">
       {/* Background radial glows */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] glow-radial-gold opacity-60 pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[600px] h-[600px] glow-radial-emerald opacity-40 pointer-events-none" />
-      <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[400px] h-[400px] glow-radial-blue opacity-30 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] glow-radial-gold opacity-60 pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] glow-radial-emerald opacity-40 pointer-events-none" />
+      <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] glow-radial-blue opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
 
@@ -164,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute bottom-40 -left-3 sm:-left-8 bg-glass shadow-xl flex items-center space-x-2.5 max-w-[175px] p-2 hover:scale-105 transition-transform animate-float-delayed"
+            className="hidden sm:flex absolute bottom-40 -left-3 sm:-left-8 bg-glass shadow-xl flex items-center space-x-2.5 max-w-[175px] p-2 hover:scale-105 transition-transform animate-float-delayed"
           >
             <div className="w-8 h-8 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
               <Wallet className="w-4 h-4 text-gold-600 dark:text-gold-400" />

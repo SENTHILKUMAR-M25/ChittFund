@@ -79,9 +79,9 @@ export const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-24 relative bg-luxury-dark overflow-hidden">
       {/* Background glow decoration */}
-      <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[350px] h-[350px] glow-radial-emerald opacity-10 pointer-events-none" />
+      <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[150px] h-[150px] sm:w-[350px] sm:h-[350px] glow-radial-emerald opacity-10 pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

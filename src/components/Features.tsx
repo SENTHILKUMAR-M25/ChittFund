@@ -97,9 +97,9 @@ export const Features: React.FC = () => {
   return (
     <section id="features" className="py-24 relative bg-luxury-dark overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-gold-500/5 via-blue-500/5 to-luxury-emerald/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[200px] sm:w-[800px] sm:h-[500px] bg-gradient-to-r from-gold-500/5 via-blue-500/5 to-luxury-emerald/5 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -133,7 +133,7 @@ export const Features: React.FC = () => {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {featuresData.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}

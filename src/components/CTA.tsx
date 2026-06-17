@@ -10,9 +10,9 @@ export const CTA: React.FC<CTAProps> = ({ onNavigate }) => {
   return (
     <section className="py-20 relative bg-luxury-dark overflow-hidden">
       {/* Glow Effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] glow-radial-gold opacity-20 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] sm:w-[700px] sm:h-[350px] glow-radial-gold opacity-20 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         
         {/* Banner Card */}
         <motion.div

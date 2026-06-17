@@ -37,11 +37,10 @@ const PlanCard: React.FC<PlanCardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -12, transition: { duration: 0.2 } }}
-      className={`rounded-2xl p-8 flex flex-col relative transition-all duration-300 ${
-        featured
+      className={`rounded-2xl p-8 flex flex-col relative transition-all duration-300 ${featured
           ? 'bg-glass-gold border-gold-500/50 shadow-xl shadow-gold-500/10'
           : 'bg-glass border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 shadow-lg'
-      }`}
+        }`}
     >
       {/* Featured visual labels */}
       {featured && (
@@ -107,11 +106,10 @@ const PlanCard: React.FC<PlanCardProps> = ({
       {/* CTA inside Plan */}
       <button
         onClick={onSelect}
-        className={`w-full text-center py-3.5 rounded-xl font-bold text-sm transition-all duration-300 mt-8 cursor-pointer ${
-          featured
+        className={`w-full text-center py-3.5 rounded-xl font-bold text-sm transition-all duration-300 mt-8 cursor-pointer ${featured
             ? 'bg-gradient-gold text-luxury-dark shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01]'
             : 'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/20 dark:hover:border-white/20 text-gray-900 dark:text-white'
-        }`}
+          }`}
       >
         {featured ? 'Subscribe Gold Scheme' : 'Join Scheme'}
       </button>
@@ -203,10 +201,10 @@ export const ChitPlans: React.FC = () => {
   return (
     <section id="plans" className="py-24 relative bg-luxury-dark">
       {/* Background radial glows */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[700px] h-[700px] glow-radial-gold opacity-10 pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[200px] h-[200px] sm:w-[700px] sm:h-[700px] glow-radial-gold opacity-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <framerMotion.div
@@ -218,7 +216,7 @@ export const ChitPlans: React.FC = () => {
           >
             <span className="text-xs font-bold tracking-widest uppercase text-gold-600 dark:text-gold-400">Tailored Schemes</span>
           </framerMotion.div>
-          
+
           <framerMotion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -228,7 +226,7 @@ export const ChitPlans: React.FC = () => {
           >
             Choose Your <span className="text-gradient-gold">Chit Investment Plan</span>
           </framerMotion.h2>
-          
+
           <framerMotion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -241,15 +239,26 @@ export const ChitPlans: React.FC = () => {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {plansData.map((plan, index) => (
-            <PlanCard
-              key={index}
-              {...plan}
-              onSelect={() => handleOpenModal(plan)}
-            />
-          ))}
+        <div className="relative w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 items-stretch">
+            {plansData.map((plan, index) => {
+              const isFeatured = !!plan.featured;
+
+              return (
+                <div
+                  key={index}
+                  className={`transition-all duration-500 ${
+                    isFeatured ? 'lg:scale-[1.03] z-10' : ''
+                  }`}
+                >
+                  <PlanCard {...plan} onSelect={() => handleOpenModal(plan)} />
+                </div>
+              );
+            })}
+          </div>
         </div>
+
+
       </div>
 
       {/* Popup Modal for Plan Subscription */}
@@ -274,6 +283,8 @@ export const ChitPlans: React.FC = () => {
               className="bg-glass rounded-2xl border border-black/10 dark:border-white/10 p-6 sm:p-8 max-w-[480px] w-full shadow-2xl relative z-10 overflow-hidden"
             >
               <button
+                type="button"
+                aria-label="Close modal"
                 onClick={handleCloseModal}
                 className="absolute top-4 right-4 p-2 rounded-lg bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-500 hover:text-gray-700 dark:hover:text-white transition-colors cursor-pointer"
               >

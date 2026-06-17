@@ -67,9 +67,9 @@ export const Testimonials: React.FC = () => {
   return (
     <section className="py-24 relative bg-luxury-dark overflow-hidden">
       {/* Background Radial Glow */}
-      <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[300px] glow-radial-gold opacity-10 pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[250px] h-[250px] sm:w-[850px] sm:h-[300px] glow-radial-gold opacity-10 pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
