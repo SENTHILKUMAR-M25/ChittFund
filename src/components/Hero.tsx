@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, TrendingUp, Users, DollarSign, Wallet } from 'lucide-react';
+import {  CheckCircle2, TrendingUp, Users, DollarSign, Wallet } from 'lucide-react';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;

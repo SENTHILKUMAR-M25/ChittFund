@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Shield, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, ArrowRight } from 'lucide-react';
 import logo from '../assets/jod.png'; 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;

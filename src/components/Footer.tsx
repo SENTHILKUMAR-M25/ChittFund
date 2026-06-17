@@ -3,7 +3,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  ShieldCheck,
+
   ChevronRight,
 } from 'lucide-react';
 import logo from '../assets/jod.png';
